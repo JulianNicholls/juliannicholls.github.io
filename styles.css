@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 90%;
   padding:  0 3rem;
 }
 
@@ -33,6 +33,15 @@ h2 {
 .text {
   border-right: 0.2rem solid #777;
   padding-right: 0.1em;
+}
+
+.icons {
+  padding: 0 1rem;
+}
+
+.icons a {
+  color: white;
+  margin-right: 0.5rem;
 }
 
 @media(min-width: 1200px) {
