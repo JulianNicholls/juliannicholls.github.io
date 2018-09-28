@@ -42,6 +42,16 @@ h2 {
 .icons a {
   color: white;
   margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.icon-text {
+  opacity: 0;
+  transition: all 300ms;
+}
+
+i:hover + .icon-text {
+  opacity: 1;
 }
 
 @media(min-width: 1200px) {
