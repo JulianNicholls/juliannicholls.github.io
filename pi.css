@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
 
+:root {
+  --body: #333;
+  --text: #ddd;
+  --column: #555;
+  --link: #ddd;
+  --link-hover: #ffd;
+}
+
 body {
-  background: #333;
-  color: #ddd;
+  background: var(--body) url(images/raspi.jpg) center center / cover;
+  color: var(--text);
   font-family: 'Raleway', sans-serif;
   height: 100vh
 }
@@ -21,15 +29,16 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #ddd;
+  color: var(--link);
 }
 
 a:hover {
-  color: white;
+  color: var(--link-hover);
 }
 
 .container {
   max-width: 1000px;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
@@ -39,9 +48,12 @@ a:hover {
 
 .columns {
   display: flex;
+  opacity: 0.8;
 }
 
 .column {
+  background: var(--column);
+  margin: 0.5rem;
   flex: 1;
 }
 
@@ -52,6 +64,7 @@ a:hover {
 .pl3 {
   padding-left: 3rem;
 }
+
 .pl4 {
   padding-left: 4rem;
 }
