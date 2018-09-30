@@ -2,14 +2,13 @@
 
 :root {
   --body: #333;
-  --text: #ddd;
+  --text: #eee;
   --column: #555;
-  --link: #ddd;
+  --link: #eee;
   --link-hover: #ffd;
 }
 
 body {
-  /* background: var(--body) url(images/raspi.jpg) center center / cover; */
   background: var(--body) url(images/raspi-trans.png) center center / cover;
   color: var(--text);
   font-family: 'Raleway', sans-serif;
@@ -17,15 +16,16 @@ body {
 }
 
 h1, h2 {
+  margin-top: 1em;
   font-weight: 200;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 a {
@@ -49,13 +49,13 @@ a:hover {
 
 .columns {
   display: flex;
-  opacity: 0.8;
 }
 
 .column {
   background: var(--column);
-  margin: 0.5rem;
   flex: 1;
+  margin: 0.5rem;
+  opacity: 0.8;
 }
 
 .list-unstyled {
@@ -68,4 +68,8 @@ a:hover {
 
 .pl4 {
   padding-left: 4rem;
+}
+
+.pb1 {
+  padding-bottom: 1rem;
 }
