@@ -394,7 +394,7 @@ h1 {
       justify-self: start; }
   #colour-blocks .block {
     border: 1px solid #2f2f4f;
-    cursor: default; }
+    cursor: pointer; }
     #colour-blocks .block p {
       line-height: 21px;
       text-align: center; }
@@ -403,7 +403,9 @@ h1 {
   border: 2px solid black;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   font-size: 1rem;
-  padding: 0.5rem; }
+  padding: 0.5rem 1rem; }
+  .sample-text h1 {
+    margin: 0; }
 
 .html-colour-list {
   background: #737373;
@@ -415,6 +417,10 @@ h1 {
   grid-template-columns: 3fr 2fr 2fr 3fr 3fr;
   margin-top: 1rem;
   padding: 0.5rem; }
+  .html-colour-list .html-colour-list__title {
+    font-size: 1.3em;
+    grid-column: 1 / -2;
+    text-align: center; }
   .html-colour-list div {
     padding: 0.5rem 0;
     padding-left: 2.5rem; }
@@ -424,6 +430,7 @@ h1 {
     color: white;
     outline: none; }
     .html-colour-list button:hover {
-      color: aquamarine; }
+      color: aquamarine;
+      outline: 1px solid aquamarine; }
 
 /*# sourceMappingURL=main.css.map*/
