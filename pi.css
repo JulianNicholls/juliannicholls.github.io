@@ -9,7 +9,7 @@
 }
 
 body {
-  background: var(--body) url(images/raspi-trans.png) center center / cover;
+  background: var(--body) url(images/raspi-trans-2.png) center center / cover;
   color: var(--text);
   font-family: 'Raleway', sans-serif;
   height: 100vh
