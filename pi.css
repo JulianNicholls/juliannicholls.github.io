@@ -9,7 +9,8 @@
 }
 
 body {
-  background: var(--body) url(images/raspi-trans-2.png) center center / cover;
+  background: var(--body) url(images/raspi-trans-2-1.png) center center / cover;
+  background-blend-mode: multiply;
   color: var(--text);
   font-family: 'Raleway', sans-serif;
   height: 100vh
