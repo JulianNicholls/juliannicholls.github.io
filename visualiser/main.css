@@ -351,9 +351,13 @@ h1 {
     width: 4rem; }
   #input-box .swatch {
     align-self: center;
-    border: 1px solid black;
-    height: 1.5rem;
-    width: 1.5rem; }
+    background: none;
+    border: none;
+    height: 2rem;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    width: 2rem; }
 
 #info-table {
   background: #f8f8f8;
