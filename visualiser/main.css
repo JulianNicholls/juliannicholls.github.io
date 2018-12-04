@@ -388,7 +388,7 @@ h1 {
   font-size: 1.06rem;
   grid-template-columns: 0.6fr repeat(7, 1fr);
   margin: 1rem auto;
-  padding: 10px; }
+  padding: 0.5rem; }
   #colour-blocks span {
     color: #0f4d8a;
     font-weight: bold;
@@ -400,7 +400,8 @@ h1 {
     border: 1px solid #2f2f4f;
     cursor: pointer; }
     #colour-blocks .block p {
-      line-height: 21px;
+      margin: 0.6rem 0;
+      line-height: 20px;
       text-align: center; }
 
 .sample-text {
