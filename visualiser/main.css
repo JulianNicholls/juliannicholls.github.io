@@ -364,12 +364,15 @@ h1 {
   border: 2px solid #000;
   border-collapse: collapse;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
+  #info-table tr.odd {
+    background: #e8e8e8; }
   #info-table th,
   #info-table td {
     padding: 0.38rem 0.25rem; }
   #info-table th {
-    color: #0f4d8a;
-    border: 2px solid #2f2f4f; }
+    background: #fcf9cf;
+    border: 2px solid #2f2f4f;
+    color: #0f4d8a; }
     #info-table th.luminance {
       font-size: 90%; }
   #info-table td {
