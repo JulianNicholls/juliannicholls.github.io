@@ -322,6 +322,7 @@ body {
 h1 {
   color: #0f4d8a;
   font-size: 1.7rem;
+  letter-spacing: 1px;
   text-align: center; }
 
 #input-box {
@@ -371,12 +372,12 @@ h1 {
   border-collapse: collapse;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
   #info-table tr.odd {
-    background: #e8e8e8; }
+    background: #e8e8f8; }
   #info-table th,
   #info-table td {
     padding: 0.38rem 0.25rem; }
   #info-table th {
-    background: #fcf9cf;
+    background: #d4d4f2;
     border: 2px solid #2f2f4f;
     color: #0f4d8a; }
     #info-table th.luminance {
