@@ -3,7 +3,7 @@
 :root {
   --body: #333;
   --text: #eee;
-  --column: rgba(85, 85, 85, 0.9);
+  --column: rgba(85, 85, 85, 0.8);
   --link: #eee;
   --link-hover: #ffd;
 }

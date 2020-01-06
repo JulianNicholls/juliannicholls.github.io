@@ -13,10 +13,10 @@ class Typewriter {
 
   type() {
     const { deleting, words, listIndex, wordIndex, holder } = this;
-    let delay = 300;
+    let delay = 250;
 
     if (deleting) {
-      delay = 200;
+      delay = 150;
 
       if (--this.wordIndex < 0) {
         this.deleting = false;
