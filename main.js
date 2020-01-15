@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', init);
 
-const words = ['Developer', 'Maker'];
+const words = ['Developer', 'Maker', 'Open Source Contributor'];
 
 class Typewriter {
   constructor() {
