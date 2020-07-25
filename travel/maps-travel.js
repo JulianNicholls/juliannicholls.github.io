@@ -111,8 +111,6 @@ const addMarker = (loc) => {
       let content = `<h2>${name}</h2>`;
 
       if (atcocode) {
-        console.log('Loading buses', atcocode);
-
         const { departures } = await getBusDepartures(atcocode);
 
         if (Object.keys(departures).length > 0) {
@@ -122,8 +120,6 @@ const addMarker = (loc) => {
         stop.close();
         document.querySelector('.bus-info').innerHTML = content;
       } else if (station_code) {
-        console.log('Loading trains');
-
         const { departures } = await getTrainDepartures(station_code);
 
         if (departures.all.length > 0) {
