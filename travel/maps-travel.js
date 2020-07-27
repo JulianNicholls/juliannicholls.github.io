@@ -118,7 +118,7 @@ const addMarker = (loc) => {
         } else content += '<h2>No scheduled departures</h2>';
 
         stop.close();
-        document.querySelector('.bus-info').innerHTML = content;
+        document.querySelector('#departure-info').innerHTML = content;
       } else if (station_code) {
         const { departures } = await getTrainDepartures(station_code);
 
@@ -127,7 +127,7 @@ const addMarker = (loc) => {
         } else content += '<h2>No scheduled departures</h2>';
 
         stop.close();
-        document.querySelector('.train-info').innerHTML = content;
+        document.querySelector('#departure-info').innerHTML = content;
       } else {
         console.log('Neither:', name, atcocode, station_code);
       }
