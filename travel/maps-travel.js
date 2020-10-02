@@ -139,7 +139,7 @@ const addMarker = (loc) => {
 };
 
 const addMarkers = (locations) => {
-  locations.member.filter(({ distance }) => distance <= 1000).forEach(addMarker);
+  locations.member.filter(({ distance }) => distance <= 1600).forEach(addMarker);
 };
 
 const addStops = (position) => {
@@ -180,7 +180,7 @@ function initMap() {
 function handleLocationError(browserHasGeolocation) {
   console.error(
     browserHasGeolocation
-      ? 'Error: The Geolocation service failed.'
-      : "Error: Your browser doesn't support geolocation."
+      ? 'There was a problem with the Geolocation service.'
+      : "Your browser doesn't support geolocation."
   );
 }
