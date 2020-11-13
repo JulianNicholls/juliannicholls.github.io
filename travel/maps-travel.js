@@ -37,15 +37,15 @@ const busDeparturesTable = (departures) => {
   buses.sort((a, b) => a.localeCompare(b));
 
   let text = `
-<table class="bus-list">
-  <thead>
-    <tr>
-      <th class="bus">Bus</th>
-      <th class="destination">Destination</th>
-      <th class="time">Time</th>
-    </tr>
-  </thead>
-  <tbody>\n`;
+  <table class="bus-list">
+    <thead>
+      <tr>
+        <th class="bus">Bus</th>
+        <th class="destination">Destination</th>
+        <th class="time">Time</th>
+      </tr>
+    </thead>
+    <tbody>\n`;
 
   buses.forEach((key) => {
     departures[key].forEach(
@@ -59,7 +59,12 @@ const busDeparturesTable = (departures) => {
         if (aimed_departure_time !== best_departure_estimate)
           time = 'delayed: ' + best_departure_estimate;
 
-        text += `<tr><td>${line_name}</td><td>${direction}</td><td>${time}</td></tr>\n`;
+        text += `
+        <tr>
+          <td>${line_name}</td>
+          <td>${direction}</td>
+          <td>${time}</td>
+        </tr>\n`;
       }
     );
   });
@@ -70,21 +75,26 @@ const busDeparturesTable = (departures) => {
 // Platform is omitted, since it doesn't get set for my local station
 const trainDeparturesTable = (departures) => {
   let text = `
-<table class="train-list">
-  <thead>
-    <tr>
-    <th class="destination">Destination</th>
-    <th class="time">Time</th>
-    <th class="status">Status</th>
-    </tr>
-  </thead>
-  <tbody>\n`;
+  <table class="train-list">
+    <thead>
+      <tr>
+      <th class="destination">Destination</th>
+      <th class="time">Time</th>
+      <th class="status">Status</th>
+      </tr>
+    </thead>
+    <tbody>\n`;
 
   departures.forEach((train) => {
     // const platform = train.platform || ' ';
     const expected_time = train.expected_departure_time;
 
-    text += `<tr><td>${train.destination_name}</td><td>${expected_time}</td><td>${train.status}</td></tr>\n`;
+    text += `
+    <tr>
+      <td>${train.destination_name}</td>
+      <td>${expected_time}</td>
+      <td>${train.status}</td>
+    </tr>\n`;
   });
 
   return text + '</tbody>\n</table>\n';
@@ -169,18 +179,20 @@ function initMap() {
 
         addStops(position);
       },
-      () => handleLocationError(true)
+      (err) => handleLocationError(true, err),
+      { enableHighAccuracy: true }
     );
   } else {
     // Browser doesn't support Geolocation
-    handleLocationError(false);
+    handleLocationError(false, null);
   }
 }
 
-function handleLocationError(browserHasGeolocation) {
+function handleLocationError(browserHasGeolocation, err) {
   console.error(
     browserHasGeolocation
       ? 'There was a problem with the Geolocation service.'
-      : "Your browser doesn't support geolocation."
+      : "Your browser doesn't support geolocation.",
+    err
   );
 }
