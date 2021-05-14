@@ -149,7 +149,7 @@ const addMarker = (loc) => {
 };
 
 const addMarkers = (locations) => {
-  locations.member.filter(({ distance }) => distance <= 1600).forEach(addMarker);
+  locations.member.filter(({ distance }) => distance <= 1700).forEach(addMarker);
 };
 
 const addStops = (position) => {

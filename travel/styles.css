@@ -64,4 +64,9 @@ th.destination {
     width: 30%;
     min-width: 45ch;
   }
+
+  table {
+    min-width: 90%;
+    margin: 1rem auto;
+  }
 }
